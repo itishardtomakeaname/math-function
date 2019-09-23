@@ -1,0 +1,15 @@
+long double jiecheng(long double x)//阶乘函数
+{
+	long double sum=1;
+	for (; x > 0; x--)
+		sum = sum * x;
+	return sum;
+}
+long double zuheshu(long double n, long double m)//组合数
+{
+	return jiecheng(n) / (jiecheng(n - m) * jiecheng(m));
+}
+long double pailie(long double n,long double m)//排列数
+{
+	return jiecheng(n) / jiecheng(m);
+}
